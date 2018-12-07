@@ -13,6 +13,7 @@
 -(CDHorizontalScrollView *)horizontalScrollView {
 
 if (!_horizontalScrollView) {
+
 _horizontalScrollView = [[CDHorizontalScrollView alloc] initWithFrame: CGRectMake(20, 200, self.view.frame.size.width, 120) withClassCell:[CDTestCollectionViewCell class] isNib: false withDelegate:self];
 
    }
