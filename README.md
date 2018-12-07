@@ -29,7 +29,8 @@ _horizontalScrollView = [[CDHorizontalScrollView alloc] initWithFrame: CGRectMak
 
 
 return self.dataArray;
-    }
+ 
+}
 
 
 //每个item大小
@@ -37,19 +38,22 @@ return self.dataArray;
 
 
   return CGSizeMake(120, 80);
-   }
+   
+}
 
 //上左下右边距
 -(UIEdgeInsets)collectionViewInsetForSectionAtIndex:(NSInteger)section {
 
    return UIEdgeInsetsZero;
-   }
+    
+}
 
 //每个item之间的间距
 -(CGFloat)collectionViewMinimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
 
   return 10;
-  }
+   
+}
 
 // 选中cell
 -(void)didselectItemAtIndexPath:(NSIndexPath *)indexPath {
