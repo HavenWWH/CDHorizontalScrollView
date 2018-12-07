@@ -55,8 +55,7 @@ return self.dataArray;
 -(void)didselectItemAtIndexPath:(NSIndexPath *)indexPath {
 
 
-   NSLog(@"选中%@", @(indexPath.row));
-    }
+   NSLog(@"选中%@", @(indexPath.row));        }
 
 
 ## Requirements
