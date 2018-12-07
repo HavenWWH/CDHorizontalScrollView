@@ -18,7 +18,9 @@ _horizontalScrollView = [[CDHorizontalScrollView alloc] initWithFrame: CGRectMak
 
    }
 
-   return _horizontalScrollView;        }
+   return _horizontalScrollView;        
+   
+}
 
 
 ### CDHorizontalScrollViewDelegate
