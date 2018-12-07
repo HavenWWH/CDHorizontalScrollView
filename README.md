@@ -7,7 +7,61 @@
 
 ## Example
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+### 初始化
+
+- (CDHorizontalScrollView *)horizontalScrollView {
+
+if (!_horizontalScrollView) {
+
+_horizontalScrollView = [[CDHorizontalScrollView alloc] initWithFrame: CGRectMake(20, 200, self.view.frame.size.width, 120) withClassCell:[CDTestCollectionViewCell class] isNib: false withDelegate:self];
+
+}
+
+         return _horizontalScrollView;
+
+}
+
+
+### CDHorizontalScrollViewDelegate
+
+- (NSArray *)numberOfColumnsInCollectionView:(CDHorizontalScrollView *)collectionView {
+
+
+         return self.dataArray;
+
+}
+
+
+//每个item大小
+- (CGSize)cellSizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+
+
+         return CGSizeMake(120, 80);
+
+}
+
+//上左下右边距
+- (UIEdgeInsets)collectionViewInsetForSectionAtIndex:(NSInteger)section {
+
+         return UIEdgeInsetsZero;
+
+}
+
+//每个item之间的间距
+
+- (CGFloat)collectionViewMinimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
+
+         return 10;
+
+}
+
+- (void)didselectItemAtIndexPath:(NSIndexPath *)indexPath {
+
+
+         NSLog(@"选中%@", @(indexPath.row));
+
+}
+
 
 ## Requirements
 
@@ -22,7 +76,7 @@ pod 'CDHorizontalScrollView'
 
 ## Author
 
-513433750@qq.com, 513433750@qq.com
+ 513433750@qq.com
 
 ## License
 

@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'CDHorizontalScrollView'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of CDHorizontalScrollView.'
+  s.summary          = '横向滚动视图'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,19 +18,19 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+横向滚动视图, 其实是对collectionView的简单封装, 方便使用 可以自定义cell,  (纯代码, Xib都行)简单快捷,  详见Demo
                        DESC
 
   s.homepage         = 'https://github.com/513433750@qq.com/CDHorizontalScrollView'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
+  s.license          = 'MIT'
   s.author           = { '513433750@qq.com' => '513433750@qq.com' }
-  s.source           = { :git => 'https://github.com/513433750@qq.com/CDHorizontalScrollView.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/HavenWWH/CDHorizontalScrollView.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'CDHorizontalScrollView/Classes/**/*'
+  s.source_files = 'CDHorizontalScrollView/*.{h,m}'
   
   # s.resource_bundles = {
   #   'CDHorizontalScrollView' => ['CDHorizontalScrollView/Assets/*.png']

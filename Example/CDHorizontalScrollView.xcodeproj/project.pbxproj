@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		504E624221BA24D7001D44A3 /* CDTestCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 504E624121BA24D7001D44A3 /* CDTestCollectionViewCell.m */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -39,7 +40,9 @@
 /* Begin PBXFileReference section */
 		0B70FD95B64D27B9C590B6B7 /* Pods-CDHorizontalScrollView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CDHorizontalScrollView_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CDHorizontalScrollView_Tests/Pods-CDHorizontalScrollView_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		42D60D520783386A1CE2DB0A /* Pods-CDHorizontalScrollView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CDHorizontalScrollView_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CDHorizontalScrollView_Tests/Pods-CDHorizontalScrollView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		579C475F516E61EFA28A4811 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		504E624021BA24D7001D44A3 /* CDTestCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDTestCollectionViewCell.h; sourceTree = "<group>"; };
+		504E624121BA24D7001D44A3 /* CDTestCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDTestCollectionViewCell.m; sourceTree = "<group>"; };
+		579C475F516E61EFA28A4811 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* CDHorizontalScrollView_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CDHorizontalScrollView_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -65,8 +68,8 @@
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		919ECB204C6F7FB2EACAEFAA /* Pods-CDHorizontalScrollView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CDHorizontalScrollView_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-CDHorizontalScrollView_Example/Pods-CDHorizontalScrollView_Example.release.xcconfig"; sourceTree = "<group>"; };
 		9F7E6533A561913A1AF994F6 /* Pods-CDHorizontalScrollView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CDHorizontalScrollView_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CDHorizontalScrollView_Example/Pods-CDHorizontalScrollView_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		A62C5F5905C22B4F879B6D6B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		B1425D226B2E6A52AFF9F49D /* CDHorizontalScrollView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = CDHorizontalScrollView.podspec; path = ../CDHorizontalScrollView.podspec; sourceTree = "<group>"; };
+		A62C5F5905C22B4F879B6D6B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		B1425D226B2E6A52AFF9F49D /* CDHorizontalScrollView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = CDHorizontalScrollView.podspec; path = ../CDHorizontalScrollView.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +146,8 @@
 		6003F593195388D20070C39A /* Example for CDHorizontalScrollView */ = {
 			isa = PBXGroup;
 			children = (
+				504E624021BA24D7001D44A3 /* CDTestCollectionViewCell.h */,
+				504E624121BA24D7001D44A3 /* CDTestCollectionViewCell.m */,
 				6003F59C195388D20070C39A /* CDAppDelegate.h */,
 				6003F59D195388D20070C39A /* CDAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
@@ -370,6 +375,7 @@
 				6003F59E195388D20070C39A /* CDAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* CDViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				504E624221BA24D7001D44A3 /* CDTestCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
