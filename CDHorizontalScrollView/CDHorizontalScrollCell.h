@@ -10,4 +10,6 @@
 
 @interface CDHorizontalScrollCell : UICollectionViewCell
 @property (nonatomic, strong) id obj;
+-(UIViewController *)cd_viewController;
+-(void)cellSelectRowAtIndexPath:(NSIndexPath *)indexPath;
 @end

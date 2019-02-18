@@ -39,6 +39,7 @@
 - (void)setupView {
     
     [self addSubview:self.collectionView];
+//    self.collectionView.clipsToBounds = false;
 }
 #pragma mark - Target Methods
 
@@ -48,6 +49,12 @@
     [self.listMutaArray removeAllObjects];
     [self.listMutaArray addObjectsFromArray:[self.scrollViewDelegate numberOfColumnsInCollectionView:self]];
     [self.collectionView reloadData];
+}
+
+
+- (void)scrollToIndex: (NSInteger)index {
+    
+    [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:index inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:true];
 }
 #pragma mark - Private Method
 
@@ -62,7 +69,7 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
                   cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    return [collectionView dequeueReusableCellWithReuseIdentifier: NSStringFromClass(self.cellClass) forIndexPath:indexPath];
+    return [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass(self.cellClass) forIndexPath:indexPath];
 }
 - (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(nonnull UICollectionViewCell *)cell forItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
     
@@ -76,6 +83,11 @@
     [collectionView deselectItemAtIndexPath:indexPath animated:true];
     if (self.scrollViewDelegate && [self.scrollViewDelegate respondsToSelector:@selector(didselectItemAtIndexPath:)]) {
         [self.scrollViewDelegate didselectItemAtIndexPath:indexPath];
+    }
+    
+    CDHorizontalScrollCell *cell = (CDHorizontalScrollCell *)[collectionView cellForItemAtIndexPath:indexPath];
+    if ([cell respondsToSelector:@selector(cellSelectRowAtIndexPath:)]) {
+        [cell cellSelectRowAtIndexPath:indexPath];
     }
 }
 //MARK: - UICollectionViewDelegateLeftAlignedLayout
@@ -108,13 +120,21 @@ referenceSizeForHeaderInSection:(NSInteger)section {
     return [self.scrollViewDelegate collectionViewMinimumInteritemSpacingForSectionAtIndex:section];
 }
 
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    
+    if (self.scrollViewDelegate && [self.scrollViewDelegate respondsToSelector:@selector(hotizontalScrollViewDidScroll:)]) {
+        
+        [self.scrollViewDelegate hotizontalScrollViewDidScroll:scrollView];
+    }
+}
+
 #pragma mark - Setter Getter Methods
 - (UICollectionView *)collectionView {
     if (!_collectionView) {
         UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
         layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
         
-        _collectionView = [[UICollectionView alloc] initWithFrame: self.bounds collectionViewLayout:layout];
+        _collectionView = [[UICollectionView alloc] initWithFrame:self.bounds collectionViewLayout:layout];
         _collectionView.dataSource = self;
         _collectionView.delegate = self;
         _collectionView.showsHorizontalScrollIndicator = false;
@@ -127,10 +147,10 @@ referenceSizeForHeaderInSection:(NSInteger)section {
         _collectionView.scrollsToTop = false;
         
         if (self.isNib) {
-            [_collectionView registerNib:[UINib nibWithNibName: NSStringFromClass(self.cellClass) bundle:nil] forCellWithReuseIdentifier:NSStringFromClass(self.cellClass)];
+            [_collectionView registerNib:[UINib nibWithNibName:NSStringFromClass(self.cellClass) bundle:nil] forCellWithReuseIdentifier:NSStringFromClass(self.cellClass)];
         } else {
             
-            [_collectionView registerClass:[self.cellClass class] forCellWithReuseIdentifier: NSStringFromClass(self.cellClass)];
+            [_collectionView registerClass:[self.cellClass class] forCellWithReuseIdentifier:NSStringFromClass(self.cellClass)];
         }
     }
     return _collectionView;

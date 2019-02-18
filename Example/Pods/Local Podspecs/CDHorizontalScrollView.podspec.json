@@ -1,16 +1,16 @@
 {
   "name": "CDHorizontalScrollView",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "summary": "横向滚动视图",
-  "description": "横向滚动视图, 可以自定义cell,  一句代码搞定, 简单快捷,  详见Demo",
+  "description": "横向滚动视图, 其实是对collectionView的简单封装, 方便使用 可以自定义cell,  (纯代码, Xib都行)简单快捷,  详见Demo",
   "homepage": "https://github.com/513433750@qq.com/CDHorizontalScrollView",
   "license": "MIT",
   "authors": {
     "513433750@qq.com": "513433750@qq.com"
   },
   "source": {
-    "git": "https://github.com/513433750@qq.com/CDHorizontalScrollView.git",
-    "tag": "0.1.0"
+    "git": "https://gitlab.ttsing.com/ios/CDHorizontalScrollView.git",
+    "tag": "0.1.2"
   },
   "platforms": {
     "ios": "8.0"

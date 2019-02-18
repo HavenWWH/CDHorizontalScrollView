@@ -15,20 +15,15 @@
 
 @property (nonatomic, strong, readonly) UICollectionView *collectionView;
 
-/**
- 初始化方法
-
- @param frame frame
- @param classCell 自定义的Cell
- @param isNib  是否Xib
- @param deleagte  代理
- @return CDHorizontalScrollView
- */
 - (instancetype)initWithFrame:(CGRect)frame withClassCell:(Class)classCell isNib:(BOOL)isNib withDelegate:(id<CDHorizontalScrollViewDelegate>)deleagte;
 
-// 重新加载
+/**
+ *  重新加载
+ */
 - (void)reloadData;
 
+
+- (void)scrollToIndex: (NSInteger)index;
 
 //- (void)addRefreshEvent;
 @end
@@ -37,20 +32,20 @@
 @protocol CDHorizontalScrollViewDelegate <NSObject>
 
 @optional
-
-// cell数量
+/**
+ *  总列数
+ */
 - (NSArray *)numberOfColumnsInCollectionView:(CDHorizontalScrollView *)collectionView;
 
-// 每个item大小
+//每个item大小
 - (CGSize)cellSizeForItemAtIndexPath:(NSIndexPath *)indexPath;
-
-// 每个上左下右内边距
+//上左下右
 - (UIEdgeInsets)collectionViewInsetForSectionAtIndex:(NSInteger)section;
-
-// 每个item之间的间距
+//每个item之间的间距
 - (CGFloat)collectionViewMinimumInteritemSpacingForSectionAtIndex:(NSInteger)section;
 
-// 选中cell
+
 - (void)didselectItemAtIndexPath:(NSIndexPath *)indexPath;
 
+- (void)hotizontalScrollViewDidScroll: (UIScrollView *)scrollView;
 @end

@@ -1,5 +1,5 @@
 PODS:
-  - CDHorizontalScrollView (0.1.0)
+  - CDHorizontalScrollView (0.1.2)
 
 DEPENDENCIES:
   - CDHorizontalScrollView (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  CDHorizontalScrollView: d188ae4c24fdfb46683442267cb7dec8961c3047
+  CDHorizontalScrollView: 597875b64748b91aefaeb2a03f6b2f6396dfe1b4
 
 PODFILE CHECKSUM: 33d75efa0330d57854aae3d7165de263c7e20a0b
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.0.beta.2
